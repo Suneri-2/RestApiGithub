@@ -47,7 +47,7 @@ jobs:
 
       # ─── Run tests (skip failures for now) ─────────────
       - name: Run tests with coverage
-        run: pytest --cov=app --cov-report=xml --cov-report=term-missing || echo "Skipping tests"
+        run: pytest --cov=app --cov-report=xml --cov-report=term-missing ||true
 
       - name: Upload coverage report
         if: always()
